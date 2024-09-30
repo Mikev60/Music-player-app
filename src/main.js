@@ -4,6 +4,9 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { auth } from '@/includes/firebase'
+import App from './App.vue'
+import router from './router'
+import VeeValidatePlugin from '@/includes/validation'
 
 let app
 auth.onAuthStateChanged(() => {
@@ -17,7 +20,3 @@ auth.onAuthStateChanged(() => {
     app.mount('#app')
   }
 })
-
-import App from './App.vue'
-import router from './router'
-import VeeValidatePlugin from '@/includes/validation'
