@@ -66,7 +66,6 @@ export default {
         })
     },
     beforeRouteLeave(to, from, next) {
-        console.log(this.unsavedFlag)
         if (!this.unsavedFlag) {
             next()
         } else {
